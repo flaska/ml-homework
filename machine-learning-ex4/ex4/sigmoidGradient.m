@@ -17,7 +17,9 @@ g = zeros(size(z));
 
 
 
+f = 1./(1+exp(-z))
 
+g = f .* (1-f)
 
 
 

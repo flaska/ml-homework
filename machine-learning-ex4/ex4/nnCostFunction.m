@@ -84,10 +84,12 @@ end
 
 J = 1/m* sum(sum(-y_.*log(a3'),2) - sum((1-y_).*log(1-a3'),2));
 
-Theta1 = Theta1(:,2:size(Theta1,2));
-Theta2 = Theta2(:,2:size(Theta2,2));
+Theta1reg = Theta1(:,2:size(Theta1,2));
+Theta2reg = Theta2(:,2:size(Theta2,2));
 
-J = J + lambda/2/m * (sum(Theta1(:).*Theta1(:))+sum(Theta2(:).*Theta2(:)));
+J = J + lambda/2/m * (sum(Theta1reg(:).*Theta1reg(:))+sum(Theta2reg(:).*Theta2reg(:)));
+
+
 
 
 
